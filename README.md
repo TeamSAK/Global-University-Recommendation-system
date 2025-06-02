@@ -1,87 +1,82 @@
-# Global-University-Recommendation-system
-🎓 University Recommendation System
-An intelligent, data-driven university recommendation engine that suggests the top matching institutions for students based on their academic profile, budget, region, language preferences, and more. This system uses machine learning and cosine similarity scoring to personalize suggestions, helping applicants make informed decisions for higher education worldwide.
+# 🎓 University Recommendation System
 
-🚀 Features
-🔍 Custom User Input: Enter GPA, IELTS, preferred region, tuition budget, living cost, degree level, and specialization.
+An AI-powered university recommendation engine that suggests top global universities based on user input such as GPA, IELTS, tuition budget, specialization, and degree level. Built using Python, machine learning, and real-world university data.
 
-🤖 AI-Powered Matching: Uses cosine similarity over preprocessed and weighted features to suggest the best-fit universities.
+---
 
-🌎 Global Dataset: Trained on a cleaned dataset of over 2000+ universities with real-world attributes.
+## 📌 Table of Contents
 
-💸 Budget Filter: Filter results by tuition and living costs with fallback logic for broader recommendations.
+- [Features](#-features)
+- [Demo](#-demo)
+- [How It Works](#-how-it-works)
+- [Tech Stack](#-tech-stack)
+- [Dataset Overview](#-dataset-overview)
+- [How to Run](#-how-to-run)
+- [Sample Input/Output](#-sample-inputoutput)
+- [Future Improvements](#-future-improvements)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-🎓 Degree-Level Specific Matching: Ensures results align with user’s specified level — Bachelor, Master, or PhD.
+---
 
-🧠 Flexible Recommendation Logic: Provides fallback matches when strict filters yield no direct hits.
+## 🚀 Features
 
-📊 Dataset Fields Used
-University Name, Country, City
+- Custom student input fields (GPA, IELTS, Degree Level, Budget, etc.)
+- Cosine similarity-based matching on encoded & weighted features
+- Real-world university dataset (2000+ entries)
+- Budget + region filtering with fallback logic
+- Degree-level specific filtering (Bachelor/Master/PhD)
+- Outputs Top 5 best-fit universities
 
-Field of Specialization
+---
 
-Tuition & Living Costs
+## 🎥 Demo
 
-IELTS & GPA Requirements
+*Coming Soon: Screencast/GIF demo of the system in action.*
 
-Degree Level, Region, Language of Instruction
+---
 
-Internship Opportunities, Intake Months, Scholarship Availability
+## ⚙️ How It Works
 
-Public or Private, Application Fees, Acceptance Rate, Job Placement Rate
+1. Load and clean university dataset  
+2. Encode categorical fields and scale numeric features  
+3. Take user input and apply filters (GPA, IELTS, budget, region)  
+4. Calculate similarity between user profile and universities  
+5. Rank and display top 5 best-matching universities
 
-🧪 Tech Stack
-Python 3
+---
 
-Pandas for data processing
+## 🧰 Tech Stack
 
-Scikit-learn for encoding, scaling, and similarity scoring
+- **Language**: Python  
+- **Libraries**: `pandas`, `scikit-learn`, `numpy`, `jupyter`  
+- **Similarity Algorithm**: Cosine Similarity  
+- **Input Format**: Jupyter Notebook + Excel Dataset
 
-Jupyter Notebook for execution
+---
 
-Excel (.xlsx) as the input data source
+## 📊 Dataset Overview
 
-🛠️ How to Run
-Clone the repository:
+Fields used:
+- `University`, `Country`, `City`, `Region`
+- `Field_Specialization`, `Degree_Level`
+- `Average_GPA_Requirement`, `IELTS_Requirement`
+- `Tuition_Fee_USD`, `Living_Cost_Per_Year_USD`
+- `Scholarship_Available`, `Language_of_Instruction`
+- `Internship_Opportunities`, `Application_Fee_USD`
+- `Acceptance_Rate`, `Job_Placement_Rate`
 
-bash
-Copy
-Edit
+---
+
+## 💻 How to Run
+
+```bash
+# 1. Clone the repo
 git clone https://github.com/yourusername/university-recommendation-system.git
 cd university-recommendation-system
-Install dependencies:
 
-bash
-Copy
-Edit
+# 2. Install dependencies
 pip install -r requirements.txt
-Run the notebook in Jupyter or Google Colab.
 
-📥 Example Input
-plaintext
-Copy
-Edit
-Field of Specialization: Artificial Intelligence
-Degree Level: Master
-GPA: 3.2
-IELTS: 7.0
-Max Tuition: 10000
-Max Living Cost: 8000
-Scholarship Available: Yes
-Region: EU
-🧠 Future Enhancements
-Add university application deadlines and intake seasons
-
-Integrate ranking APIs (QS, THE)
-
-Add support for program-specific recommendations (e.g., MBA vs. MSc AI)
-
-Web interface with streamlit or Flask
-
-Fully funded program filter toggle
-
-🤝 Contributing
-Pull requests and improvements are welcome! Please ensure code is clean and documented before submission.
-
-📄 License
-This project is open-source under the MIT License.
+# 3. Launch the notebook
+jupyter notebook University_Recommendation_System.ipynb
